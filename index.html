@@ -1,118 +1,188 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Healing Haven — Support for Trauma, Depression & Anxiety</title>
-  <meta name="description" content="Calm, non-judgmental resources and coping tools for trauma, depression, anxiety, and fear of death." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#e6f4ff; /* very light blue */
-      --card:#eadcff; /* light purple for rectangles */
-      --muted:#67727a;
-      --accent:#7fb3d5; /* soft blue */
-      --accent-2:#b8d7c9; /* soft green */
-      --lav:#cfc6ff; /* lavender */
-      --glass: rgba(255,255,255,0.7);
-      --radius:16px;
-      color-scheme: light;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial; background: var(--bg);}
-    .container{max-width:1100px;margin:32px auto;padding:24px}
-    header{display:flex;align-items:center;gap:16px}
-    .logo{display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
-    .logo h1{margin:0;font-size:20px;color:#15384a}
-    .tag{font-size:12px;color:var(--muted)}
-
-    nav{margin-left:auto}
-    nav a{margin-left:16px;color:#154b5a;text-decoration:none;font-weight:600}
-
-    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:18px}
-    .heroCard{background: var(--card);padding:28px;border-radius:20px;box-shadow:0 10px 30px rgba(17,51,65,0.06)}
-    .hero h2{margin:0 0 12px 0;font-size:28px}
-    .hero p{color:var(--muted);line-height:1.5}
-
-    .controls{display:flex;gap:10px;margin-top:14px}
-    .btn{background: var(--card);border:none;color:white;padding:10px 14px;border-radius:12px;font-weight:600;cursor:pointer}
-    .btn.secondary{background: var(--card);color:#154b5a;border:1px solid rgba(21,75,90,0.08)}
-
-    .breathBox{display:flex;flex-direction:column;align-items:center;gap:10px;background: var(--card);padding:20px;border-radius:16px;}
-    .circle{width:120px;height:120px;border-radius:50%;background: #e6f4ff;display:flex;align-items:center;justify-content:center;box-shadow:inset 0 -6px 30px rgba(0,0,0,0.02)}
-    .circle.sm{width:80px;height:80px}
-
-    main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:26px}
-    .card{background: var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 8px 24px rgba(17,51,65,0.04)}
-    h3{margin-top:0}
-    .muted{color:var(--muted)}
-
-    .aboutList{display:grid;gap:12px}
-    .aboutItem{padding:14px;border-radius:12px;background: var(--card);border:1px solid rgba(21,75,90,0.03)}
-
-    .exercise{display:flex;flex-direction:column;gap:8px}
-    .exercise pre{background: var(--card);padding:12px;border-radius:8px;margin:0;overflow:auto}
-
-    .emergency{background: var(--card);padding:16px;border-radius:12px;border:1px solid rgba(255,80,80,0.08)}
-    .emergency strong{color:#7a2419}
-
-    .quote{font-style:italic;color:#1b3b45;padding:12px;border-left:3px solid var(--accent-2);background: var(--card);border-radius:8px}
-
-    footer{margin-top:28px;padding:14px;text-align:center;color:var(--muted);font-size:14px}
-
-    @media (max-width:960px){
-      .hero{grid-template-columns:1fr}
-      main{grid-template-columns:1fr}
-      nav{display:none}
-    }
-
-    .float-shape{position:fixed;width:380px;height:220px;right:-80px;top:20vh;pointer-events:none;opacity:0.12;background: #e6f4ff;filter:blur(36px);transform:rotate(10deg);border-radius:48px}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>🌿 Healing Haven – Support for Trauma, Depression & Anxiety 🌸🐱</title>
+<meta name="description" content="Calm, non-judgmental resources and coping tools for trauma, depression, anxiety, and fear of death." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #e6f4ff;
+  --card: #eadcff;
+  --muted: #67727a;
+  --accent: #7fb3d5;
+  --accent-2: #b8d7c9;
+  --radius:16px;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; background: var(--bg); }
+.container { max-width: 1100px; margin: 32px auto; padding: 24px; }
+header { display: flex; align-items: center; gap: 16px; }
+.logo { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.logo h1 { margin: 0; font-size: 24px; color: #15384a; }
+.tag { font-size: 14px; color: var(--muted); }
+nav { margin-left: auto; }
+nav a { margin-left: 16px; color: #154b5a; text-decoration: none; font-weight: 600; }
+.hero { display: grid; grid-template-columns: 1fr 380px; gap: 28px; align-items: center; margin-top: 18px; }
+.heroCard { background: var(--card); padding: 28px; border-radius: 20px; box-shadow: 0 10px 30px rgba(17,51,65,0.06); }
+.hero h2 { margin: 0 0 12px 0; font-size: 28px; }
+.hero p { color: var(--muted); line-height: 1.5; }
+.controls { display: flex; gap: 10px; margin-top: 14px; }
+.btn { background: var(--card); border: none; color: #154b5a; padding: 10px 14px; border-radius: 12px; font-weight: 600; cursor: pointer; }
+.btn.secondary { background: var(--card); color: #154b5a; border: 1px solid rgba(21,75,90,0.08); }
+.breathBox { display: flex; flex-direction: column; align-items: center; gap: 10px; background: var(--card); padding: 20px; border-radius: 16px; }
+.circle { width: 120px; height: 120px; border-radius: 50%; background: #e6f4ff; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 -6px 30px rgba(0,0,0,0.02); }
+main { display: grid; grid-template-columns: 1fr 360px; gap: 28px; margin-top: 26px; }
+.card { background: var(--card); padding: 20px; border-radius: var(--radius); box-shadow: 0 8px 24px rgba(17,51,65,0.04); }
+h3 { margin-top: 0; }
+.muted { color: var(--muted); }
+.aboutList { display: grid; gap: 12px; }
+.aboutItem { padding: 14px; border-radius: 12px; background: var(--card); border:1px solid rgba(21,75,90,0.03); }
+.exercise { display: flex; flex-direction: column; gap: 8px; }
+.exercise pre { background: var(--card); padding: 12px; border-radius: 8px; margin: 0; overflow: auto; }
+.emergency { background: var(--card); padding: 16px; border-radius: 12px; border: 1px solid rgba(255,80,80,0.08); }
+.emergency strong { color: #7a2419; }
+.quote { font-style: italic; color: #1b3b45; padding: 12px; border-left: 3px solid var(--accent-2); background: var(--card); border-radius: 8px; }
+footer { margin-top: 28px; padding: 14px; text-align: center; color: var(--muted); font-size: 14px; }
+.float-shape { position: fixed; width: 380px; height: 220px; right: -80px; top: 20vh; pointer-events: none; opacity: 0.12; background: #e6f4ff; filter: blur(36px); transform: rotate(10deg); border-radius: 48px; }
+@media (max-width:960px){ .hero{grid-template-columns:1fr} main{grid-template-columns:1fr} nav{display:none} }
+</style>
 </head>
 <body>
-  <div class="float-shape" aria-hidden="true"></div>
-  <div class="container">
-    <header>
-      <div class="logo">
-        <h1>Healing Haven</h1>
-        <div class="tag">Support for trauma, depression, anxiety & fear of death</div>
+<div class="float-shape" aria-hidden="true"></div>
+<div class="container">
+  <header>
+    <div class="logo">
+      <h1>🌿 Healing Haven</h1>
+      <div class="tag">Support for trauma, depression, anxiety & fear of death 🌸🐱</div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#tools">Tools</a>
+      <a href="#inspiration">Inspiration</a>
+      <a href="#help">Get Help</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="heroCard">
+      <h2>Welcome 🌸🐱</h2>
+      <p>Healing Haven offers gentle, practical tools and compassionate information for people dealing with trauma, depression, anxiety, and fear of death. Use the exercises, read the explanations, and reach out when you need professional support.</p>
+      <div class="controls">
+        <button class="btn" id="start-breath">Start Guided Breath 🌬️</button>
+        <button class="btn secondary" id="read-about">Read About Conditions</button>
       </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#tools">Tools</a>
-        <a href="#inspiration">Inspiration</a>
-        <a href="#help">Get Help</a>
-      </nav>
-    </header>
-
-    <section class="hero">
-      <div class="heroCard">
-        <h2>You are not alone. Small steps matter.</h2>
-        <p>Healing Haven offers gentle, practical tools and compassionate information for people dealing with trauma, depression, anxiety and fear of death. Use the exercises, read the explanations, and reach out when you need professional support.</p>
-        <div class="controls">
-          <button class="btn" id="start-breath">Start Guided Breath</button>
-          <button class="btn secondary" id="read-about">Read About Conditions</button>
-        </div>
-
-        <div style="margin-top:18px">
-          <strong>Interactive Exercises</strong>
-          <div class="muted">Breathing, grounding, and short journaling prompts you can try right now.</div>
-        </div>
+      <div style="margin-top:18px">
+        <strong>Interactive Exercises 🌿</strong>
+        <div class="muted">Breathing, grounding, journaling prompts you can try right now.</div>
       </div>
+    </div>
 
-      <aside class="card breathBox" aria-label="guided breathing and quick check-in">
-        <div class="circle" id="breath-circle" aria-hidden="true"><div id="breath-text">Ready</div></div>
-        <div style="text-align:center">
-          <button id="breathStart" class="btn">Begin 1-minute Breath</button>
-          <button id="panicHelp" class="btn secondary">Quick Panic Tool</button>
+    <aside class="card breathBox" aria-label="guided breathing and quick check-in">
+      <div class="circle" id="breath-circle" aria-hidden="true"><div id="breath-text">Ready</div></div>
+      <div style="text-align:center">
+        <button id="breathStart" class="btn">Begin 1-minute Breath 🌸</button>
+        <button id="panicHelp" class="btn secondary">Quick Panic Tool 🐱</button>
+      </div>
+    </aside>
+  </section>
+
+  <main>
+    <section>
+      <article id="about" class="card">
+        <h3>About the Conditions 🌸</h3>
+        <div class="aboutList">
+          <div class="aboutItem">
+            <strong>Trauma</strong>
+            <p class="muted">Trauma results from experiences that overwhelm our ability to cope, affecting memory, emotions, bodily sensations, and relationships.</p>
+          </div>
+          <div class="aboutItem">
+            <strong>Depression</strong>
+            <p class="muted">Depression can feel heavy or hopeless. Symptoms include persistent low mood, loss of interest, sleep or appetite changes, and difficulty concentrating.</p>
+          </div>
+          <div class="aboutItem">
+            <strong>Anxiety</strong>
+            <p class="muted">Anxiety causes excessive worry, tension, or panic attacks. Breathing techniques and therapy can help.</p>
+          </div>
+          <div class="aboutItem">
+            <strong>Fear of Death 🌿</strong>
+            <p class="muted">Existential fear is common. Mindfulness, meaning-making, and professional support help navigate uncertainty.</p>
+          </div>
         </div>
-      </aside>
+      </article>
+
+      <article id="tools" class="card" style="margin-top:18px">
+        <h3>Coping Tools & Self-Help 🌸</h3>
+        <div class="exercise">
+          <div><strong>Grounding (5-4-3-2-1)</strong><pre>See 5 things
+Touch 4 things
+Hear 3 things
+Smell 2 things
+Taste 1 thing</pre></div>
+          <div><strong>Box Breathing</strong><pre>Inhale 4s → Hold 4s → Exhale 4s → Hold 4s (repeat 4 times)</pre></div>
+          <div><strong>Quick Panic Tool 🐱</strong><pre>Stop, slow breathing, place feet flat, name 5 things in room, sip cold water, focus on exhale.</pre></div>
+          <div><strong>Journaling Prompts ✍️</strong><pre>- One small helpful action today
+- What do I need most?
+- Memory of safety in detail</pre></div>
+          <div><strong>Fear of Death Exercise 🌿</strong><pre>Write a letter from your future self 10 years ahead. What guidance or comfort would you hear?</pre></div>
+        </div>
+      </article>
+
+      <article id="inspiration" class="card" style="margin-top:18px">
+        <h3>Inspiration & Healing 🌸</h3>
+        <div class="quote">"Healing isn't a straight line. Small steps — a breath, a call, a warm cup of tea — are brave acts."</div>
+      </article>
+
     </section>
 
-    <!-- Rest of your content remains unchanged -->
+    <aside>
+      <div class="card emergency" id="help">
+        <h3>Immediate Help & Crisis Resources 🕊️</h3>
+        <p><strong>If in danger or considering self-harm, call local emergency services immediately.</strong></p>
+        <p class="muted">This site is not a substitute for professional help. Seek a therapist or check local hotlines:</p>
+        <ul class="muted">
+          <li><strong>US</strong>: 988</li>
+          <li><strong>UK</strong>: Samaritans 116 123</li>
+          <li><strong>International</strong>: Check local directories</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
 
-  </div>
+  <footer>
+    <div>© Healing Haven — A supportive information resource. Not a medical service.</div>
+    <div style="margin-top:8px;color:var(--muted)">Made for comfort — deploy to Netlify by adding as <code>index.html</code>.</div>
+  </footer>
+</div>
+<script>
+const breathCircle = document.getElementById('breath-circle');
+const breathText = document.getElementById('breath-text');
+const breathBtn = document.getElementById('breathStart');
+const startBtn = document.getElementById('start-breath');
+const panicBtn = document.getElementById('panicHelp');
+
+function animateBreath(durationSeconds=60){
+  let sequence=['Breathe in','Hold','Breathe out','Hold','Breathe in','Breathe out'];
+  let idx=0;
+  let phaseTime=durationSeconds/sequence.length;
+  function step(){
+    if(idx>=sequence.length){breathText.innerText='Done'; breathCircle.style.transform='scale(1)'; return;}
+    breathText.innerText=sequence[idx];
+    if(sequence[idx].includes('in')) breathCircle.style.transform='scale(1.25)';
+    else if(sequence[idx].includes('out')) breathCircle.style.transform='scale(0.9)';
+    else breathCircle.style.transform='scale(1)';
+    idx++; setTimeout(step, phaseTime*1000);
+  }
+  step();
+}
+
+breathBtn?.addEventListener('click', ()=>animateBreath(60));
+startBtn?.addEventListener('click', ()=>animateBreath(60));
+panicBtn?.addEventListener('click', ()=>alert('Quick panic tool:\n1) Slow breathing\n2) Name 5 things you see\n3) Sip cold water\n4) Focus on exhale'));
+</script>
 </body>
 </html>
+
